@@ -17,15 +17,19 @@ public class RadioTest {
 
         Assertions.assertEquals(exepted, actual);
 
-
     }
 
     @Test
-    public void testStation() {
+    public void testStations() {
+        station.setCurrentStation(8);
 
+        int expexted = 8;
+        int actual = station.getCurrentStation();
 
-        Assertions.assertEquals(9, station.getLastRadioStation());
+        Assertions.assertEquals(expexted, actual);
+
     }
+
 
     @Test
     public void shouldStation() {
@@ -42,8 +46,8 @@ public class RadioTest {
     @Test
     public void shouldMaxStation() {
 
-
         station.setToMaxStation();
+
 
         int expected = 9;
         int actual = station.getLastRadioStation();

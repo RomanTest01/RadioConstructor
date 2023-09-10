@@ -1,6 +1,6 @@
 public class Radio {
 
-    private int lastRadioStation = 9;
+    private int lastRadioStation;
     private int currentStation;
     private int increaseVolume;
     private int maxVoidRadio = 100;
