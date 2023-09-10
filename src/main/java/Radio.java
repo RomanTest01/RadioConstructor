@@ -8,41 +8,39 @@ public class Radio {
     private int minVoidRadio = 0;
 
 
-
-
     public Radio() {
         this.lastRadioStation = 9;
     }
 
-    public Radio( int stationsCount){
+    public Radio(int stationsCount) {
         this.lastRadioStation = stationsCount - 1;
 
     }
 
 
-    public int getCurrentStation () {
+    public int getCurrentStation() {
 
         return currentStation;
     }
 
 
-    public int getLastRadioStation () {
+    public int getLastRadioStation() {
         return lastRadioStation;
     }
 
-    public int getIncreaseVolume () {
+    public int getIncreaseVolume() {
         return increaseVolume;
     }
 
-    public int getMaxVoidRadio () {
+    public int getMaxVoidRadio() {
         return maxVoidRadio;
     }
 
-    public int getMinVoidRadio () {
+    public int getMinVoidRadio() {
         return minVoidRadio;
     }
 
-    public void setCurrentStation ( int newCurrentStation){  //выбор станции
+    public void setCurrentStation(int newCurrentStation) {  //выбор станции
         if (newCurrentStation > lastRadioStation) {
             newCurrentStation = 0;
         }
@@ -51,7 +49,7 @@ public class Radio {
         currentStation = newCurrentStation;
     }
 
-    public void setNextRadioStation () {   //переключение станции вперед
+    public void setNextRadioStation() {   //переключение станции вперед
         int next = currentStation + 1;
 
         currentStation = next;
@@ -61,7 +59,7 @@ public class Radio {
 
     }
 
-    public void setPrevRadioStation () {  //переключение станции назад
+    public void setPrevRadioStation() {  //переключение станции назад
         int prev = currentStation - 1;
 
         currentStation = prev;
@@ -70,12 +68,12 @@ public class Radio {
         }
     }
 
-    public void setToMaxStation () {
+    public void setToMaxStation() {
         currentStation = lastRadioStation;
     }
 
 
-    public void setIncreaseVolume ( int newIncreaseVolume){  //выбор громкости
+    public void setIncreaseVolume(int newIncreaseVolume) {  //выбор громкости
         if (newIncreaseVolume > maxVoidRadio) {
             newIncreaseVolume = maxVoidRadio;
         }
@@ -87,7 +85,7 @@ public class Radio {
         increaseVolume = newIncreaseVolume;
     }
 
-    public void setMaxVolume () {
+    public void setMaxVolume() {
         increaseVolume = maxVoidRadio;
     }
 
